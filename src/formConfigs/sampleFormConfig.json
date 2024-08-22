@@ -1,0 +1,79 @@
+[
+    {
+      "id": "1",
+      "label": "Full Name",
+      "name": "fullName",
+      "type": "text",
+      "options": [],
+      "validation": {
+        "required": true,
+        "minLength": 3,
+        "maxLength": 50
+      },
+      "conditionalLogic": null
+    },
+    {
+      "id": "2",
+      "label": "Email Address",
+      "name": "email",
+      "type": "email",
+      "options": [],
+      "validation": {
+        "required": true
+      },
+      "conditionalLogic": null
+    },
+    {
+      "id": "3",
+      "label": "Qualification",
+      "name": "qualification",
+      "type": "select",
+      "options": ["HSC", "Diploma", "UG", "PG"],
+      "validation": {
+        "required": true
+      },
+      "conditionalLogic": null
+    },
+    {
+      "id": "4",
+      "label": "HSC Marks",
+      "name": "hscMarks",
+      "type": "number",
+      "options": [],
+      "validation": {
+        "required": true,
+        "min": 0,
+        "max": 100
+      },
+      "conditionalLogic": {
+        "field": "qualification",
+        "value": "HSC"
+      }
+    },
+    {
+      "id": "5",
+      "label": "Government Servant",
+      "name": "isGovServant",
+      "type": "checkbox",
+      "options": [],
+      "validation": {},
+      "conditionalLogic": null
+    },
+    {
+      "id": "6",
+      "label": "Government ID Proof",
+      "name": "govIdProof",
+      "type": "file",
+      "options": [],
+      "validation": {
+        "required": true,
+        "fileType": "image/jpeg, image/png, application/pdf",
+        "fileSize": 1024
+      },
+      "conditionalLogic": {
+        "field": "isGovServant",
+        "value": true
+      }
+    }
+  ]
+  

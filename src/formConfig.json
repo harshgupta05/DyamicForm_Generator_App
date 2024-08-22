@@ -1,0 +1,12 @@
+[
+    {
+      "id": "123",
+      "type": "text",
+      "label": "Name",
+      "options": [],
+      "validation": {
+        "required": true
+      }
+    }
+  ]
+  
